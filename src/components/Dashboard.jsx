@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InventoryTableWrap from './inventorydb/InventoryTableWrap';
 import ContactUsTableWrap from './contactusdb/ContactUsTableWrap';
+import DonationTableWrap from './donationdb/DonationTableWrap';
 
 const Dashboard = () => {
 
@@ -20,6 +21,7 @@ const Dashboard = () => {
             <p>This is text from the dashboard</p>
               <ContactUsTableWrap />
               <InventoryTableWrap />
+              <DonationTableWrap />
             </div>
           </div>
         </div>
