@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@400;700&family=Oregano&family=Oswald:wght@400;500;700&display=swap');
+
+@layer base {
+    body {
+        @apply font-[Oswald]
+    }
+
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+
+    h1 {
+        @apply font-[Neuton];
+    }
+
+    h2 {
+        @apply font-[Neuton];
+        @apply font-semibold;
+        @apply text-2xl;
+    }
+
+    p {
+        @apply py-4;
+
+    }
+}
