@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import InventoryTableWrap from './inventorydb/InventoryTableWrap';
 import ContactUsTableWrap from './contactusdb/ContactUsTableWrap';
 import DonationTableWrap from './donationdb/DonationTableWrap';
+import VolunteerTableWrap from './volunteerdb/VolunteerTableWrap';
 
 const Dashboard = () => {
 
@@ -22,6 +23,7 @@ const Dashboard = () => {
               <ContactUsTableWrap />
               <InventoryTableWrap />
               <DonationTableWrap />
+              <VolunteerTableWrap />
             </div>
           </div>
         </div>
