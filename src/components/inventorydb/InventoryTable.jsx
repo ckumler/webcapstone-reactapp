@@ -1,7 +1,7 @@
 import React from 'react';
-import TableRow from './TableRow';
+import InventoryTableRow from './InventoryTableRow';
 
-const Table = ({ data }) => {
+const InventoryTable = ({ invTableData, setInvTableData }) => {
   return (
     <>
       <table className="table-auto w-full">
@@ -19,8 +19,8 @@ const Table = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map(row => (
-            <TableRow key={row._id} data={row} />
+          {invTableData.map(row => (
+            <InventoryTableRow key={row._id} invTableData={row} setInvTableData={setInvTableData} />
           ))}
         </tbody>
       </table>
@@ -29,4 +29,4 @@ const Table = ({ data }) => {
 };
 
 
-export default Table;
+export default InventoryTable;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import InventoryTable from './InventoryTable';
+import InventoryTableWrap from './inventorydb/InventoryTableWrap';
 
 const Dashboard = () => {
 
@@ -17,7 +17,7 @@ const Dashboard = () => {
             {/* Container */}
             <div >
             <p>This is text from the dashboard</p>
-            <InventoryTable />
+            <InventoryTableWrap />
             </div>
           </div>
         </div>
