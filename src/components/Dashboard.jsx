@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import InventoryTableWrap from "./inventorydb/InventoryTableWrap";
 import ContactUsTableWrap from "./contactusdb/ContactUsTableWrap";
 import DonationTableWrap from "./donationdb/DonationTableWrap";
@@ -13,7 +13,6 @@ const Dashboard = () => {
       <div>
         <div className=" max-w-[1200px] mx-auto px-[30px] h-full bg-[#FAEBAD]">
           <div className="sm:text-center pb-8">
-            <h1 className="text-4xl font-bold inline border-b-4 border-[#EB4F31]"></h1>
             {/* Container */}
             <div>
               <p>This is text from the dashboard</p>

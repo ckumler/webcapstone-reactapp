@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Hero from "../assets/entrance.jpg";
 
 const Home = () => {
+  let navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/inventory');
+  }
+
   return (
     <div name="home">
       <img src={Hero} alt="" className="w-screen max-h-[800px] aspect-auto" />
@@ -49,7 +56,7 @@ const Home = () => {
             by visiting the links at the bottom.
           </p>
           <div>
-            <button className="border-2 group border-gray-800 px-6 py-3 my-2 flex items-center hover:bg-[#EB4F31] hover:border-[#EB4F31]">
+            <button className="border-2 group border-gray-800 px-6 py-3 my-2 flex items-center hover:bg-[#EB4F31] hover:border-[#EB4F31]" onClick={handleClick}>
               View Inventory
               <span className="group-hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-3" />

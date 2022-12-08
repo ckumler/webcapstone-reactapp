@@ -1,14 +1,47 @@
 import React from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const notify = (msg) => toast(msg);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    fetch("https://webcapstone-api.onrender.com/contactUs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    // Show Toast
+    notify("Thank you for your feedback!");
+
+    // Clear the form
+    const form = event.target;
+    const inputs = form.querySelectorAll("input, textarea");
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+  };
+
   return (
     <div
       name="contact"
       className="w-full h-screen bg-[#FAEBAD] flex justify-center items-center p-4"
     >
+      <ToastContainer />
       <form
-        method="POST"
-        action="https://getform.io/f/8ab5f230-e87e-4cb0-983c-66c68f01ca61"
+        onSubmit={handleSubmit}
         className="flex flex-col max-w-[600px] w-full"
       >
         <div className="pb-8">
@@ -33,7 +66,10 @@ const Contact = () => {
           rows="10"
           placeholder="Message"
         ></textarea>
-        <button className="border-2 group border-gray-800 px-4 py-3 my-8 mx-auto flex items-center hover:bg-[#EB4F31] hover:border-[#EB4F31]">
+        <button
+          type="submit"
+          className="border-2 group border-gray-800 px-4 py-3 my-8 mx-auto flex items-center hover:bg-[#EB4F31] hover:border-[#EB4F31]"
+        >
           Submit Feedback
         </button>
       </form>
