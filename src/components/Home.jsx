@@ -5,13 +5,23 @@ import Hero from "../assets/entrance.jpg";
 const Home = () => {
   return (
     <div name="home">
-      <img src={Hero} alt="" />
+      <img src={Hero} alt="" className="w-screen max-h-[800px] aspect-auto" />
       {/*Section*/}
-      <div className="w-full bg-[#FAEBAD] pb-[60px]">
+      <div className="w-full h-full bg-[#FAEBAD] pb-[60px]">
         {/*Container*/}
         <div className="max-w-[1200px] mx-auto px-[30px] flex flex-col justify-center h-full bg-[#FAEBAD]">
           <p>Welcome to</p>
           <h1 className="text-4xl sm:text-7xl font-bold">Katie's Place</h1>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ixgLLost21g"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            className="py-[30px] w-full h-full max-w-[1200px] max-h-[675px] aspect-video"
+          />
           <p className="py-4">
             Something exciting is happening in Shippensburg. A spirit of
             cooperation is blossoming among a broad network of people leading
